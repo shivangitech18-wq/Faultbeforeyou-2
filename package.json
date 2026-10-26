@@ -1,0 +1,32 @@
+{
+  "name": "faultbeforeyou",
+  "version": "1.0.0",
+  "description": "FaultBeforeYou — Gemma 4-Powered Equipment Fault Management & Recovery Verification",
+  "type": "module",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node --experimental-sqlite backend/server.js",
+    "dev": "node --experimental-sqlite --watch backend/server.js",
+    "seed": "node --experimental-sqlite backend/db/seed.js",
+    "test": "node --experimental-sqlite tests/runAllTests.js",
+    "test:workflow": "node --experimental-sqlite tests/workflow.test.js",
+    "test:gemma": "node --experimental-sqlite tests/gemma.test.js"
+  },
+  "keywords": [
+    "equipment-management",
+    "gemma4",
+    "troubleshooting",
+    "fault-reporting",
+    "recovery-verification",
+    "hackathon"
+  ],
+  "author": "FaultBeforeYou Team",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^2.31.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0"
+  }
+}
